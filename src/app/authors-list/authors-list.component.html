@@ -1,0 +1,5 @@
+<h2>{{authorsList.length}} Authors</h2>
+<ul *ngFor="let author of authorsList">
+  <li>{{ author }}</li>
+</ul>
+<button class="btn btn-primary" [class.pull-right]="isPulled">save</button>
