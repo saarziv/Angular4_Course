@@ -1,5 +1,6 @@
+import { IsFavouriteEventArgs } from './favourite/favourite.component';
 import { Component } from '@angular/core';
-import {IsFavouriteEventArgs} from './favourite/favourite.component';
+
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,13 @@ import {IsFavouriteEventArgs} from './favourite/favourite.component';
 })
 export class AppComponent {
   title = 'Angular';
-  onChange(eventArgs: IsFavouriteEventArgs){
+  tweetPost = {
+      post: 'post text content',
+      isLiked: false,
+      likesCount: 10
+  };
+  onChange(eventArgs: IsFavouriteEventArgs) {
     console.log('changed', eventArgs);
   }
+
 }

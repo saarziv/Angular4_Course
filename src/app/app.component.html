@@ -5,6 +5,15 @@
   </h1>
   <authors-list></authors-list>
   <favourite [is-favourite]=true (change)='onChange($event)'></favourite>
+  <i class="glyphicon glyphicon-envelope"></i>
   <title-casing></title-casing>
+  <bootstrap-panel>
+    <ng-container class="heading">heading in panel</ng-container>
+    <div class="body">
+      <p>some content</p>
+    </div>
+  </bootstrap-panel>
+  <like [is-liked]=tweetPost.isLiked [likes-count]=tweetPost.likesCount 
+  (click)='onChange()'></like>
 </div>
 
