@@ -4,7 +4,7 @@
     {{ title }}
   </h1>
   <authors-list></authors-list>
-  <favourite></favourite>
-  <title-casing></title-casing>    
+  <favourite [is-favourite]=true (change)='onChange($event)'></favourite>
+  <title-casing></title-casing>
 </div>
 

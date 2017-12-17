@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorsListComponent implements OnInit {
   authorsList: string[];
-  isPulled: boolean = true;
+  isPulled = true;
   constructor(private authorService: AuthorsService) { }
 
   ngOnInit() {
