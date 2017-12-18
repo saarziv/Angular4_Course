@@ -1,0 +1,21 @@
+<ul class="nav nav-pills">
+  <li [class.active]="viewMode === 'courses'" (click)="viewMode = 'courses'"><a>Courses view</a></li>
+  <li [class.active]="viewMode === 'teachers'" (click)="viewMode = 'teachers'"><a>Teachers view</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'teachers'">teachers view content</div>
+  <div *ngSwitchCase="'courses'">
+    <div *ngIf="containsCourses(); then coursesList; else noCourses"></div>
+    <ng-template #coursesList>
+      <h1>Course list :</h1>
+      <ul *ngFor="let course of courses">
+        <li>
+            {{ course }}
+        </li>
+      </ul>
+    </ng-template>
+    <ng-template #noCourses>
+      <h1>No Courses yet.</h1>
+    </ng-template>
+  </div>
+</div>

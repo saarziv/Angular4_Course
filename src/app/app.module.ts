@@ -9,6 +9,10 @@ import { TitleCasingComponent } from './title-casing/title-casing.component';
 import { TitlePipe } from './title.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { CoursesComponent } from './courses/courses.component';
+import { TableComponent } from './table/table.component';
+import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { LikeComponent } from './like/like.component';
     TitleCasingComponent,
     TitlePipe,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    CoursesComponent,
+    TableComponent,
+    InputFormatDirective,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

@@ -10,12 +10,21 @@ import { getLocaleDateTimeFormat } from '@angular/common/src/i18n/locale_data_ap
 })
 export class FavouriteComponent implements OnInit {
   @Input('is-favourite') isFavourite: boolean;// tslint:disable-line
+  @Input('is-liked') isLiked: boolean //tslint:disable-line
   @Output('change') click = new EventEmitter();// tslint:disable-line
   constructor() { }
   onStarClick() {
     this.isFavourite = !this.isFavourite;
     const eventArg = {
       newValue: this.isFavourite,
+      time: new Date().toLocaleDateString()
+    };
+    this.click.emit(eventArg);
+  }
+  onHeartClick() {
+    this.isLiked = !this.isLiked;
+    const eventArg = {
+      newValue: this.isLiked,
       time: new Date().toLocaleDateString()
     };
     this.click.emit(eventArg);

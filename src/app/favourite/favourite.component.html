@@ -5,3 +5,12 @@ class="glyphicon star-size"
 (click)="onStarClick()"
 > </i>
 
+<i 
+class="glyphicon star-size" 
+[ngClass]="{
+    'glyphicon-heart-empty': !isLiked,
+    'glyphicon-heart': isLiked
+}"
+(click)="onHeartClick()"
+> </i>
+

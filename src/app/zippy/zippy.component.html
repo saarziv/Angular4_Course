@@ -1,0 +1,20 @@
+  
+  <div class="panel panel-default zippy">
+    <div class="panel-heading" [class.expanded]="showContent">
+      <B>{{ title }}</B>
+      <i class="glyphicon pull-right"
+        [ngClass]="{
+            'glyphicon-chevron-down':!showContent,
+            'glyphicon-chevron-up':showContent
+          }"
+       (click)="dropDown()">
+      </i>
+    </div>
+    <div *ngIf="showContent; then Content;"></div>
+      <ng-template #Content>
+          <div class="panel-body zippy-content">
+            <ng-content></ng-content>
+          </div>
+      </ng-template>
+  </div>
+

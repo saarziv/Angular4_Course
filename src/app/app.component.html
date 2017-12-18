@@ -1,19 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:left">
   <h1>
     {{ title }}
   </h1>
   <authors-list></authors-list>
+  <br>
   <favourite [is-favourite]=true (change)='onChange($event)'></favourite>
   <i class="glyphicon glyphicon-envelope"></i>
+  <br>
   <title-casing></title-casing>
+  <br>
   <bootstrap-panel>
     <ng-container class="heading">heading in panel</ng-container>
     <div class="body">
       <p>some content</p>
     </div>
   </bootstrap-panel>
+  <br>
   <like [is-liked]=tweetPost.isLiked [likes-count]=tweetPost.likesCount 
   (click)='onChange()'></like>
+  <br>
+  <app-courses></app-courses>
+  <br>
+  <app-table></app-table>
+  <input type="text" [appInputFormat]="'lowercase'">
+  <app-zippy title="Shipping Details">
+      Shpping Details Content
+    </app-zippy>
+    <app-zippy title="Billing Details">
+        Billing Details Content
+    </app-zippy>
 </div>
 
