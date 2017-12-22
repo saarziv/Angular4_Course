@@ -13,6 +13,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { TableComponent } from './table/table.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
+import { InputFormComponent } from './input-form/input-form.component';
+import { CreateCourseFormComponent } from './create-course-form/create-course-form.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { ZippyComponent } from './zippy/zippy.component';
     CoursesComponent,
     TableComponent,
     InputFormatDirective,
-    ZippyComponent
+    ZippyComponent,
+    InputFormComponent,
+    CreateCourseFormComponent
   ],
   imports: [
     BrowserModule,

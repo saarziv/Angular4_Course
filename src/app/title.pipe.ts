@@ -1,17 +1,15 @@
 import { TitleCasingComponent } from './title-casing/title-casing.component';
-import { Pipe,PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 
 @Pipe({
-    name:'title'
+    name: 'title'
 })
-export class TitlePipe implements PipeTransform{
-    
-    transform(value :string,args?:string ){
+export class TitlePipe implements PipeTransform {
+
+    transform(value: string, args?: string ) {
         if(!value)
             return null
-
-        
         let words = value.split(" ");
         for(let i=0;i<words.length;i++){
             let word = words[i];
@@ -35,6 +33,4 @@ export class TitlePipe implements PipeTransform{
         ];
         return prepositions.includes(word.toLowerCase());
     }
-
-    
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title-casing.component.css']
 })
 export class TitleCasingComponent implements OnInit {
-  userInput:string;
+  userInput: string;
   constructor() { }
 
   ngOnInit() {
