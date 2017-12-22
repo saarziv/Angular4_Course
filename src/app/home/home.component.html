@@ -1,0 +1,22 @@
+<h1>
+  Home Page
+</h1>
+<h3>
+  Summary of Angular 4 course.
+</h3>
+<ul>
+  
+  <li *ngFor="let section of sections">
+    <label>Section name:</label>{{ section.name }} ,
+    <label for="comments">Topics and Comments : </label>
+    <textarea name="comments" class="form-control">
+      {{section.comments}}
+    </textarea>
+    <a class="btn btn-primary" routerLink="{{section.path}}">
+          component: {{ section.component }} 
+    </a>
+    <br>
+    <br>
+  </li>
+  
+</ul>

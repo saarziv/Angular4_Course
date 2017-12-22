@@ -1,14 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<router-outlet></router-outlet>
 <div style="text-align:left">
   <h1>
     {{ title }}
   </h1>
-  <authors-list></authors-list>
-  <br>
   <favourite [is-favourite]=true (change)='onChange($event)'></favourite>
   <i class="glyphicon glyphicon-envelope"></i>
   <br>
-  <title-casing></title-casing>
   <br>
   <bootstrap-panel>
     <ng-container class="heading">heading in panel</ng-container>
