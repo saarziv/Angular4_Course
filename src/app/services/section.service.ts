@@ -24,9 +24,15 @@ export class SectionService {
     },
     {
       name: 'Consuming Http services',
-      comments: `CRUD operations , seperation of concerns , look at posts.service`,
+      comments: `CRUD operations , seperation of concerns , look at posts.service and Dataservice`,
       component: 'posts',
       path: '/posts'
+    },
+    {
+      name: 'Http Assignment',
+      comments: ``,
+      component: 'my-followers',
+      path: '/myFollowers'
     }
 ];
 getSections(): any[] {

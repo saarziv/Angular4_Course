@@ -1,3 +1,4 @@
+import { FollowersService } from './services/followers.service';
 import { AppErrorHandler } from './common/app-error-handler';
 import { PostService } from './services/post.service';
 import { AuthorsService } from './services/authors.service';
@@ -23,6 +24,7 @@ import { CreateCourseFormComponent } from './create-course-form/create-course-fo
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
+import { MyFollowersComponent } from './my-followers/my-followers.component';
 
 
 
@@ -42,7 +44,8 @@ import { DataService } from './services/data.service';
     InputFormComponent,
     CreateCourseFormComponent,
     HomeComponent,
-    PostsComponent
+    PostsComponent,
+    MyFollowersComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,7 @@ import { DataService } from './services/data.service';
       {path: 'titleCasing' , component: TitleCasingComponent},
       {path: 'favourite' , component: FavouriteComponent},
       {path: 'posts' , component: PostsComponent},
+      {path: 'myFollowers' , component: MyFollowersComponent},
     ]),
     HttpClientModule
   ],
@@ -60,6 +64,7 @@ import { DataService } from './services/data.service';
     AuthorsService, 
     SectionService, 
     PostService,
+    FollowersService,
     { provide: ErrorHandler, useClass: AppErrorHandler }
   ],
   bootstrap: [AppComponent]
