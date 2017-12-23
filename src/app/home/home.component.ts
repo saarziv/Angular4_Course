@@ -1,4 +1,4 @@
-import { SectionService } from './../section.service';
+import { SectionService } from '../services/section.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -1,4 +1,4 @@
-import { TitlePipe } from './../title.pipe';
+import { TitlePipe } from '../pipes/title.pipe';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

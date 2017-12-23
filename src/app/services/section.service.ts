@@ -21,6 +21,12 @@ export class SectionService {
       comments: ``,
       component: 'favourite',
       path: '/favourite'
+    },
+    {
+      name: 'Consuming Http services',
+      comments: `CRUD operations , seperation of concerns , look at posts.service`,
+      component: 'posts',
+      path: '/posts'
     }
 ];
 getSections(): any[] {

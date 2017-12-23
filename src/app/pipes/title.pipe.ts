@@ -1,4 +1,3 @@
-import { TitleCasingComponent } from './title-casing/title-casing.component';
 import { Pipe, PipeTransform } from '@angular/core';
 
 
